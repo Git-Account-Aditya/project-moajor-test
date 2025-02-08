@@ -1,0 +1,12 @@
+#output_image{
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    border: 2px solid silver;
+}
+
+div{
+    text-align: center;
+    margin-top: 20px;
+    
+}

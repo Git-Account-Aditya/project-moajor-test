@@ -1,0 +1,4 @@
+numpy
+flask
+flask-wtf
+werkzeug

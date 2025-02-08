@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css files/index.css">
+    <link rel="stylesheet" href="static/css files/main.css">
+    <title>AI Image Enhancer</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-brand">
+                    <h1>AI Image Enhancer</h1>
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="{{ url_for('default') }}">Home</a></li>
+                        <li><a href="{{ url_for('services') }}">Services</a></li>
+                        <!-- <li><a href="contact.html">Contact</a></li> -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="section-header">
+            <h1>AI Image Enhancer</h1>
+            <p>Enhance your images with AI</p>
+        </div>
+        <div class="box1">
+            <section>
+                                
+                <div class="section-body">
+                    <div class="image-upload">
+                        <form method="post" action="/submit" enctype="multipart/form-data">
+                            <div class="image-container">
+                                <input type="file" name="image" id="image" accept="image/*" required>
+                                
+                                {% if image %}
+                                    <img src="{{ image }}" alt="Enhanced Image" id="input_image">
+                                {% endif %}
+
+                                <label for="image" id="image-label">Click Here</label>
+                            </div>
+                            <button type="submit">Upload</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_box">
+            <div class="footer-content">
+                <p>AI Image Enhancer</p>
+                <p>&copy; 2021 AI Image Enhancer</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
