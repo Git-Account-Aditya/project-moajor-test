@@ -1,17 +1,24 @@
+# Imports
 from flask import Flask, request, jsonify, render_template, url_for
 from werkzeug.utils import secure_filename
 import numpy as np
 import os
 
+
+# Initialize the Flask app
 app = Flask(__name__)
 
 UPLOAD_FOLDER = 'static/images'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+
+# Define the default route
 @app.route('/')
 def default():
     return render_template('index.html')
 
+
+# Define the submit route
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
     if 'image' not in request.files:
@@ -33,10 +40,12 @@ def submit():
     return render_template('submit.html', image=normalized_path)
 
 
+# Define the services route
 @app.route('/services', methods=['GET'])
 def services():
     return jsonify({'services': ['Super Resolution', 'Tools', 'Blury Image']})
 
 
+# Start the Flask app
 if __name__ == '__main__':
     app.run(debug = True)

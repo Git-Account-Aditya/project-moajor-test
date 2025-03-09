@@ -38,12 +38,12 @@ main, .container, .container nav, .nav-brand,.nav-items, .nav-items ul{
     user-select: none;
     margin: auto 10vw;
     padding: auto 30px;
-    color: white;
+    color: var(--font-color);
 }
 
 .nav-items ul li a{
     text-decoration: none;
-    color: white;
+    color: var(--font-color);
 }
 
 /* box 1 css */
@@ -65,6 +65,7 @@ main, .container, .container nav, .nav-brand,.nav-items, .nav-items ul{
     font-weight: 600;
     margin: auto;
     padding: 20px;
+    color: var(--text-color);
 }
 
 .image-container{
